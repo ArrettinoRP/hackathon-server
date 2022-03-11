@@ -1,0 +1,1 @@
+export { getAllHackathons } from './getAllHackathons';

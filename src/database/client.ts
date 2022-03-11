@@ -1,8 +1,6 @@
 import 'dotenv/config';
 import { Client } from 'pg';
 
-console.log(process.env.DATABASE_URL);
-
 export const client = new Client({
   database: process.env.DATABASE,
   user: process.env.DATABASE_USER,

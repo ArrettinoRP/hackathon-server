@@ -1,0 +1,1 @@
+export { HackathonInterface } from './types';
