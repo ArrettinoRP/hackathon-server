@@ -1,0 +1,1 @@
+export { findByHackathonIdHackathonRanking } from './findByHackathonIdHackathonRanking';

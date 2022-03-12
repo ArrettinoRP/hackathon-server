@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { HackathonController } from './controller';
+import { HackathonController, HackathonRankingController } from './controller';
 import { HackathonService } from './service/hackathon';
+import { HackathonRankingService } from './service/hackathonRanking';
 
 @Module({
   imports: [],
-  controllers: [HackathonController],
-  providers: [HackathonService],
+  controllers: [HackathonController, HackathonRankingController],
+  providers: [HackathonService, HackathonRankingService],
 })
 export class AppModule {}
