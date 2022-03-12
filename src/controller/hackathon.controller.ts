@@ -11,9 +11,7 @@ export class HackathonController {
       const response = await this.hackathonService.findAll();
       res.status(HttpStatus.OK).send(response);
     } catch (err) {
-      res
-        .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .send({ error: 'internal server error' });
+      res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({ error: 'internal server error' });
     }
   }
 }

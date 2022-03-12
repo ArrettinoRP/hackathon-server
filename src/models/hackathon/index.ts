@@ -1,1 +1,1 @@
-export { getAllHackathons } from './getAllHackathons';
+export { findAllHackathons } from './findAllHackathons';

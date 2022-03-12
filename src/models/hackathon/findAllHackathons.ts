@@ -1,6 +1,6 @@
 import { client } from '../../database';
 
-export const getAllHackathons = async () => {
+export const findAllHackathons = async () => {
   const query = 'SELECT * FROM hackathon';
   console.log(query);
   const response = await client.query(query);
