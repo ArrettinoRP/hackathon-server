@@ -25,7 +25,6 @@ export class HackathonService {
     newHackathon.date = getDate();
     const hackathonId = await insertHackathon({ ...newHackathon });
     for (let i = 1; i <= 10; i++) {
-      console.log(i);
       const newUserAccount = await getRandomUserAccount();
       const userAccountId = await insertUserAccount({
         username: newUserAccount.login.username,
