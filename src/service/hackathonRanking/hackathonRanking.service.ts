@@ -28,6 +28,16 @@ export class HackathonRankingService {
             points: getUserPoints(data.ranking),
           };
     }
-    return ranking;
+    const developersRanking = ranking.filter((n) => n);
+    developersRanking.sort(function (a, b) {
+      if (a.points < b.points) {
+        return 1;
+      }
+      if (a.points > b.points) {
+        return -1;
+      }
+      return 0;
+    });
+    return developersRanking;
   }
 }
