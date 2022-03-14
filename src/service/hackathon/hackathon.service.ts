@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { getRandomHackathonName, getRandomCountry, getDate, getRandomUserAccount } from './utils';
-import { findAllHackathons, insertHackathon } from '../../models/hackathon';
+import { findAllHackathons, insertHackathon, findOneHackathons } from '../../models/hackathon';
 import { insertHackathonRanking } from '../../models/hackathonRanking';
 import { insertUserAccount } from '../../models/userAccount';
 import { HackathonInterface } from '../../types';
@@ -10,6 +10,11 @@ import { HackathonInterface } from '../../types';
 export class HackathonService {
   async findAll(): Promise<HackathonInterface[]> {
     const response: HackathonInterface[] = await findAllHackathons();
+    return response;
+  }
+
+  async findOne(id: string): Promise<HackathonInterface[]> {
+    const response: HackathonInterface[] = await findOneHackathons(id);
     return response;
   }
 
